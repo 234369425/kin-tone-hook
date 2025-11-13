@@ -106,6 +106,13 @@ document.addEventListener("readystatechange", () => {
 
                 for (let i = 0; i < divs.length; i++) {
                     const div = divs[i];
+
+                    if (div.style.zIndex === '999999' && div.style.display !== 'none') {
+                        div.style.display = 'none';
+                        counter.increment();
+                        continue;
+                    }
+
                     const buttons = div.getElementsByTagName("button");
 
                     for (let j = 0; j < buttons.length; j++) {
@@ -126,7 +133,7 @@ document.addEventListener("readystatechange", () => {
                 for (let i = 0; i < bootsDiv.length; i++) {
                     const div = bootsDiv[i];
                     const buttons = div.getElementsByTagName("button");
-
+                    if (div.style.zIndex === '999999' && div.style.display === 'none') continue;
                     for (let j = 0; j < buttons.length; j++) {
                         const btn = buttons[j];
                         if (btn.classList.contains("kb-dialog-button") && btn.textContent.trim().toUpperCase() === "CANCEL") {
