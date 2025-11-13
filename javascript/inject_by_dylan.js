@@ -1,3 +1,4 @@
+/** v.2025-11-13 **/
 document.addEventListener("readystatechange", () => {
 
     let useDylanLayout = localStorage.getItem("useDylanLayout")
