@@ -107,7 +107,9 @@ document.addEventListener("readystatechange", () => {
                 for (let i = 0; i < divs.length; i++) {
                     const div = divs[i];
 
-                    if (div.style.zIndex === '999999' && div.style.display !== 'none') {
+                    const zIndex = Number.parseInt(div.style.zIndex) || 0
+
+                    if (div.style.zIndex >= 999999 && div.style.display !== 'none') {
                         div.style.display = 'none';
                         counter.increment();
                         continue;
