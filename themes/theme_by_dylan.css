@@ -1,8 +1,8 @@
 /** 视觉上改成现代的圆角 **/
 .ocean-portal-widget {
-    border-radius: 8px;
+    border-radius: 8px !important;
 }
 
 .gaia-argoui-widget-header{
-    border-radius: 8px 0 0 0;
+    border-radius: 8px 0 0 0 !important;
 }
